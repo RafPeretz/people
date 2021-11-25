@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}All people{% endblock %}
+{% block content %}
+{% for person in people %}
+    <ul>
+        {% for key, value in person.items %}
+            <li>{{ key }} : {{ value }}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+{% endblock %}
